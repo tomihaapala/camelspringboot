@@ -13,6 +13,8 @@ class Location {
 
     private String type;
     private double[] coordinates;
+    private double coordinateN;
+    private double coordinateE;
 
     public double[] getCoordinates() {
         return coordinates;
@@ -20,6 +22,8 @@ class Location {
 
     public void setCoordinates(double[] coordinates) {
         this.coordinates = coordinates;
+        setCoordinateE();
+        setCoordinateN();
     }
 
     public String getType() {
@@ -29,10 +33,20 @@ class Location {
     public void setType(String type) {
         this.type = type;
     }
-    public double getCoordinateN(){
+
+    public double getCoordinateN() {
         return this.coordinates[0];
     }
-        public double getCoordinateE(){
+
+    public double getCoordinateE() {
         return this.coordinates[1];
+    }
+
+    public void setCoordinateN() {
+        this.coordinateN = coordinates[0];
+    }
+
+    public void setCoordinateE() {
+        this.coordinateE = coordinates[1];
     }
 }

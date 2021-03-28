@@ -6,7 +6,7 @@ package com.example;
  *
  * @author Tomi
  */
-public class Train {
+public class Train extends Location {
 
     private int trainNumber;
     private String departureDate;
@@ -51,6 +51,15 @@ public class Train {
      public double[] getLocationCoordinates(){
         return this.location.getCoordinates();
     }
+     public double getCoordinateE(){
+         return this.location.getCoordinateE();
+     }
+       public double getCoordinateN(){
+         return this.location.getCoordinateN();
+     }
+             
+             
+             
      private int getSpeed(){
          return speed;
      }
